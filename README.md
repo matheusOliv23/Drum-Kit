@@ -15,3 +15,7 @@ a ideia era, ao clicar em um botão do teclado, relacionar o botão clicado ao q
 ## Demonstração
 
 ![kbd com-gif-maker](https://user-images.githubusercontent.com/78116908/179314633-e26ea23d-7d1c-45ad-b666-678eefaa43ad.gif)
+
+## Site
+
+- [Link](https://62d1e0520422277ff0aa83c2--eclectic-dieffenbachia-8803a8.netlify.app/)
