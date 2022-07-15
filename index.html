@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles/styles.css" />
+    <title>Drum Kit</title>
+</head>
+
+<body>
+    <div class="keys">
+        <div data-key="65" class="key">
+            <kbd>A</kbd>
+
+        </div>
+
+        <div data-key="83" class="key">
+            <kbd>S</kbd>
+
+        </div>
+
+        <div data-key="68" class="key">
+            <kbd>D</kbd>
+
+        </div>
+
+        <div data-key="70" class="key">
+            <kbd>F</kbd>
+
+        </div>
+
+        <div data-key="71" class="key">
+            <kbd>G</kbd>
+
+        </div>
+
+        <div data-key="72" class="key">
+            <kbd>H</kbd>
+
+        </div>
+    </div>
+
+
+    <script>
+        function typeKeyboard(e) {
+            const key = document.querySelector(`.key[data-key="${e.keyCode}"]`)
+            key.classList.add('playing')
+        }
+
+        window.addEventListener('keydown', typeKeyboard)
+
+        function removeTransition(e) {
+            if (e.propertyName !== 'transform') return
+            this.classList.remove('playing')
+        }
+
+        const keys = document.querySelectorAll('.key')
+        keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+    </script>
+
+</body>
+
+</html>
